@@ -1,9 +1,9 @@
 class PredixInsightsCli < Formula
   desc "PI is a CLI library for Predix Insights. This top technology lets you concentrate on building analytical pipelines, not managing infrastructure."
   homepage "https://www.predix.io/"
-  url "https://github.com/scottmcclary1/predix-insights-cli/releases/download/v1.0.15/predix-insights-cli_1.0.15_macOS_64-bit.tar.gz"
+  url "https://github.com/scottmcclary1/predix-insights-cli/releases/download/v1.0.16/predix-insights-cli_1.0.16_macOS_64-bit.tar.gz"
   version "1.0.16"
-  sha256 "74354e7d8bfa670fdf4040a40f27de0ed4c4b994bdd53e448da8be616fba26ef"
+  sha256 "23f3f96f2279f4bcd0b2bf6a1bddbd3129bc798737e245461e6c0019fc4dcb2a"
   
   depends_on "bash-completion"
 
@@ -11,6 +11,7 @@ class PredixInsightsCli < Formula
     bin.install "pi"
     mkdir_p "#{HOMEBREW_PREFIX}/etc/bash_completion.d"
     ls "#{prefix}"
+    ls "#{buildpath}"
     echo "if [ -f #{HOMEBREW_PREFIX} ]; then . #{HOMEBREW_PREFIX}/etc/bash_completion; fi" >> ~/.bashrc
     source ~/.bashrc
   end
